@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Team {{teamName}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let player of players">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{player.playerName}}</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          Bio...
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>

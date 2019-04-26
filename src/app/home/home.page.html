@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+      <ion-img src="/assets/nba.jpg"></ion-img>
+      <ion-card-header>
+        <ion-card-title>Welcome to NBA Sandbox</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Choose your time and learn about him.</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item *ngFor="let team of teams">
+            <ion-card no-margin margin-bottom [routerLink]="['/player/', team.teamId, team.teamName ]">
+              <ion-card-content>
+                <p>{{team.teamName}} </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+</ion-content>
