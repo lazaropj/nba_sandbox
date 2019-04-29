@@ -9,6 +9,7 @@ import nba from 'nba';
 export class HomePage {
 
   public teams:Array<Object> = []
+  
 
   constructor(){
     this.teams = nba.teams;
