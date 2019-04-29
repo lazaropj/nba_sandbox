@@ -16,7 +16,7 @@
         <ion-card-title>Welcome to NBA Sandbox</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <p>Choose your time and learn about him.</p>
+        <p>Choose your team and learn about it.</p>
       </ion-card-content>
     </ion-card>
     <ion-row>
@@ -26,6 +26,8 @@
             <ion-card no-margin margin-bottom [routerLink]="['/player/', team.teamId, team.teamName ]">
               <ion-card-content>
                 <p>{{team.teamName}} </p>
+                <p>{{team.teamId}} </p>
+                <p><img src="assets/{{team.teamId}}.png" /></p>
               </ion-card-content>
             </ion-card>
           </ion-item>
